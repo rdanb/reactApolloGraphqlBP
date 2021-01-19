@@ -1,24 +1,11 @@
-const { ApolloServer } = require('apollo-server')
-const typeDefs = require('./src/typeDefs')
+const { ApolloServer } = require('apollo-server'),
+      typeDefs = require('./src/typeDefs'),
+      resolvers = require('./src/resolvers'),
+      MockEntitiesApi = require('./src/dataSource')
 
-const exposureFactors = [{
-  val3: 5,
-  val5: 99
-}, {
-  val3: 8,
-  val5: 61
-}]
-
-const resolvers = {
-  Query: {
-    // exposure() {
-    //   return exposureFactors[0]
-    // }
-    exposure: (parent, args) => exposureFactors[args.personId]
-  },
-};
-
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ typeDefs, resolvers, dataSources: () => {
+  return {['MockEntitiesApi']: new MockEntitiesApi()}
+}});
 
 server.listen().then(({ url }) => {
   console.log(`Server ready at ${url}`);
