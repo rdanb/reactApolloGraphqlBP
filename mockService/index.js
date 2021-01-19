@@ -24,10 +24,6 @@ app.get('/facility/:id', (request, response) => {
   const { id } = request.params
   response.statusCode = 400
 
-  if (id.length > 10) {
-    return response.send(messages.maxLengthReached)
-  }
-
   if (isNaN(id)) {
     return response.send(messages.invalidNumber('facility'))
   } else {
@@ -39,10 +35,6 @@ app.get('/facility/:id', (request, response) => {
 app.get('/exposure/:id', (request, response) => {
   const { id } = request.params
   response.statusCode = 400
-
-  if (id.length > 10) {
-    return response.send(messages.maxLengthReached)
-  }
 
   if (isNaN(id)) {
     return response.send(messages.invalidNumber('exposure'))
