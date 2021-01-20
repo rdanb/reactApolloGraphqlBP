@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "install:react-app": "cd ./react-app && npm ci",
-    "install:mock-service": "cd ./mockService && npm ci",
-    "install:graphql-server": "cd ./graphqlServer && npm ci",
+    "install:mock-service": "cd ./mock-service && npm ci",
+    "install:graphql-server": "cd ./graphql-server && npm ci",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
