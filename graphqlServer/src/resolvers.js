@@ -7,8 +7,8 @@ module.exports = {
       const { val5 } = await MockEntitiesApi.getExposureDetails(val2)
 
       return {
-        val3: val3,
-        val5: val5,
+        val3,
+        val5,
       }
     }
   },
