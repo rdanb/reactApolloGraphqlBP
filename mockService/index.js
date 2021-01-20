@@ -1,6 +1,6 @@
 const express = require('express'),
       app = express(),
-      port = 3000
+      port = 5000
 const formatters = require('./util/formatters'),
       messages = require('./util/messages')
 
@@ -44,4 +44,4 @@ app.get('/exposure/:id', (request, response) => {
   }
 })
 
-app.listen(port, () => console.log(`Listening on port 3000`))
+app.listen(port, () => console.log(`Listening on port ${port}`))

@@ -1,0 +1,21 @@
+{
+  "name": "reactapollographqlbp",
+  "version": "1.0.0",
+  "description": "An Express REST application that exposes the following endpoints by running `node ./index.js`:",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "cd ./graphqlServer && npm ci && cd ./../mockService && npm ci && ./../react-app && npm ci && cd ./../",
+    "run:all": "cd ./graphqlServer && node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdanb/reactApolloGraphqlBP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdanb/reactApolloGraphqlBP/issues"
+  },
+  "homepage": "https://github.com/rdanb/reactApolloGraphqlBP#readme"
+}

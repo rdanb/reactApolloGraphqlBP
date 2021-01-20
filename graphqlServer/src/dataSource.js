@@ -3,7 +3,7 @@ const { RESTDataSource } = require('apollo-datasource-rest')
 class MockEntitiesApi extends RESTDataSource {
   constructor() {
     super()
-    this.baseURL = 'http://localhost:3000'
+    this.baseURL = 'http://localhost:5000'
   }
 
   async getPersonDetails(id) {

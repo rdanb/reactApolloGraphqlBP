@@ -5,7 +5,7 @@ module.exports = {
   }),
 
   ['facility']: input => ({
-    val3: (input * 55).toString(),
+    val3: (input * 5.5).toString(),
     val4: (input + 100).toString(),
   }),
 
@@ -13,8 +13,8 @@ module.exports = {
     val5: parseFloat(input
       .toString()
       .split('')
-      .reverse() // @R mby install TS. ai niste functii aici
-      .join('') // @R mby unit tests
+      .reverse()
+      .join('')
     ).toString()
     .replace(/^/, input < 0 ? '-' : '')
   })
