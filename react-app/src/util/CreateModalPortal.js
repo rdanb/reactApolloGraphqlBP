@@ -3,25 +3,25 @@ import { createPortal } from 'react-dom'
 
 const modalRoot = document.getElementById('modal-root')
 
-export class Modal extends React.Component {
+export class CreateModalPortal extends React.Component {
   constructor(props) {
     super(props)
-    this.el = document.createElement('div')
-    this.el.className = 'modal'
+    this.wrapperElement = document.createElement('div')
+    this.wrapperElement.className = 'modal-wrapper'
   }
 
   componentDidMount() {
-    modalRoot.appendChild(this.el)
+    modalRoot.appendChild(this.wrapperElement)
   }
 
   componentWillUnmount() {
-    modalRoot.removeChild(this.el)
+    modalRoot.removeChild(this.wrapperElement)
   }
 
   render() {
     return createPortal(
       this.props.children,
-      this.el,
+      this.wrapperElement,
     )
   }
 }
