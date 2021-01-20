@@ -4,8 +4,9 @@
   "description": "An Express REST application that exposes the following endpoints by running `node ./index.js`:",
   "main": "index.js",
   "scripts": {
-    "install:all": "cd ./graphqlServer && npm ci && cd ./../mockService && npm ci && ./../react-app && npm ci && cd ./../",
-    "run:all": "cd ./graphqlServer && node",
+    "install:react-app": "cd ./react-app && npm ci",
+    "install:mock-service": "cd ./mockService && npm ci",
+    "install:graphql-server": "cd ./graphqlServer && npm ci",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
